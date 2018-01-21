@@ -1,0 +1,341 @@
+@charset "utf-8";
+/* CSS Document */
+/*css reset*/
+* {
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;/* Firefox */
+	-webkit-box-sizing:border-box;/* Safari */
+	outline: none;
+	-webkit-text-size-adjust: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-tap-highlight-color: transparent;/* For some Androids */
+	-webkit-appearance:none;
+}
+html {
+	-webkit-text-size-adjust:none;
+	-webkit-text-size-adjust: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-tap-highlight-color: transparent;/* For some Androids */
+	-webkit-appearance:none;
+}
+body, div, dl, dt, dd, ul, ol, li, p, h1, h2, h3, h4, h5, h6, pre, form, fieldset, th, td, ul, li {
+	margin:0;
+	padding:0;
+}
+body {
+	font-family:"微软雅黑", 'Helvetica Neue', Helvetica, sans-serif;
+	color:#5e5d5d;
+	background-color:#f4f4f4;
+	outline:none;
+	-webkit-appearance:none;
+	max-width:750px;
+	margin:0 auto;
+}
+h1, h2, h3, h4, h5, h6, input, select, textarea, option, button {
+	font-size:100%;
+	font-weight:normal;
+	-webkit-appearance:none;
+}
+.btn:enabled, .btn:enabled:active, button.btn:enabled, button:enabled:active, input[type=button].btn:enabled, input[type=button]:enabled:active, input[type=reset].btn:enabled, input[type=reset]:enabled:active, input[type=submit].btn:enabled, input[type=submit]:enabled:active {
+	background:#dd2727;
+}
+table {
+	border-collapse:collapse;
+	border-spacing:0;
+}
+fieldset, img {
+	border:0
+}
+abbr {
+	border:0;
+}
+em, i {
+	font-style:normal;
+}
+ul, ol, li {
+	list-style:none;
+}
+a {
+	text-decoration:none;
+	outline: none;
+	display:block;
+}
+a:active, a:hover {
+	outline: none;
+	text-decoration:none;
+}
+a, button, input, textarea, select {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	background:none;
+	border:none;
+	-webkit-appearance:none;
+	font-family:"微软雅黑", 'Helvetica Neue', Helvetica, sans-serif;
+}/* 1.去除android a/button/input标签被点击时产生的边框 2.去除ios a标签被点击时产生的半透明灰色背景 */
+.clear {
+	clear:both;
+	height:0;
+}
+textarea {
+	resize:none;
+}/*禁止改变大小*//*解决firefox按钮文字难以垂直居中问题*/
+input[type="reset"]::-moz-focus-inner, input[type="button"]::-moz-focus-inner, input[type="submit"]::-moz-focus-inner, input[type="file"] > input[type="button"]::-moz-focus-inner {
+border:none;
+padding:0;
+-webkit-appearance:none;
+}
+input, textarea, select, option, button, form, fieldset {
+	margin:0;
+	padding:0;
+	border:none;
+	outline:none;
+}
+::-webkit-input-placeholder {
+color:#d6d5d5; font-size:14px; padding-top:1px;
+}
+:-moz-placeholder {
+color:#d6d5d5;font-size:14px; padding-top:1px;
+}
+::-moz-placeholder {
+color:#d6d5d5;font-size:14px; padding-top:1px;
+}
+:-ms-input-placeholder {
+color:#d6d5d5;font-size:14px; padding-top:1px;
+}
+/* common */
+.txthide {
+	text-indent:-9999px;
+	overflow:hidden;
+}
+.rightmore:after {
+	content:' >>';
+	font-weight:bold;
+}
+.leftmore:before {
+	content:' >>';
+	font-weight:bold;
+}
+.txt-ellipsis {
+	width:100%;
+	overflow:hidden;
+	word-break: break-all;
+	text-overflow: ellipsis;
+	-webkit-line-clamp:1;
+	-webkit-box-orient: vertical;
+	display: -webkit-box;
+	font-size: 1.375em;
+}
+/*about pisition*/.center {
+	margin-left:auto;
+	margin-right:auto;
+}
+.fl {
+	float:left;
+	display:inline;
+}/*浮动bug*/
+.fr {
+	float:right;
+	display:inline;
+}
+.clearfix:after {
+	content:".";
+	height:0;
+	display:block;
+	visibility:hidden;
+	clear:both;
+}/*IE6>*/
+*html .clearfix {
+*zoom:1
+}/*IE7>*/
+*:first-child + html .clearfix {
+	zoom:1
+}
+.zoom {
+*zoom:1
+}
+img {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.display-box-middle {
+	display:-moz-box;/* Firefox */
+	display:-webkit-box;/* Safari and Chrome */
+	display:box;
+	-moz-box-align: center;
+	-webkit-box-align: center;
+	box-align: center;
+}
+.display-box-middle-center {
+	display:-moz-box;/* Firefox */
+	display:-webkit-box;/* Safari and Chrome */
+	display:box;
+	-moz-box-pack: center;
+	-moz-box-align: center;
+	-webkit-box-pack: center;
+	-webkit-box-align: center;
+	box-pack: center;
+	box-align: center;
+}
+.container {
+	margin-top:44px;
+	margin-bottom:51px;
+	overflow:hidden;
+}
+.h-back {
+	background: url(../images/h-back.png) left center no-repeat;
+	background-size:12px 20px;
+	width:12px;
+	height:20px;
+	position:absolute;
+	top:11px;
+	left:12px;
+}
+.header-r {
+	height:100%;
+	color:#fff;
+	line-height:44px;
+	font-size:21px;
+}
+.header-r .write-blog {
+	width:30px;
+	height:30px;
+	margin-top:7px;
+}
+
+/*-------------header-----------*/
+.header {
+	background-color:#f8f8f8;
+	border-bottom:1px solid #dcdcdc;
+}
+.header h1 {
+	color:#424345;
+	font-size:21px;
+}
+.mui-bar .mui-icon {
+	color:#424345 !important;
+}
+.mui-icon-back, .mui-icon-left-nav{ position:absolute !important; left:10px; top:10px; width:12px; height:24px; background-image:url(../images/h-back.png); background-position:right center; background-repeat:no-repeat;background-size: 12px 24px;  content: '';}
+.mui-icon-back:before, .mui-icon-left-nav:before{ display:none;}
+.search-head{ background-color:#dd2727; height:50px; width:100%; }
+.search-box{ position:absolute; left:10px; top:50%; margin-top:-17px; right:52px; height:34px; overflow:hidden; background-color:#fff; -moz-border-radius:500px;  -webkit-border-radius:500px;  border-radius:500px; }
+.search-box .search-input{ height:18px !important; line-height:18px; margin:8px 0 !important; text-align:left;  border:none; background:#fff url(../images/search-icon.png); background-position:12px center; background-repeat:no-repeat; background-size:15px 15px; padding:0 15px 0 30px; font-size:14px;}
+.search-box .search-input::-webkit-input-placeholder {color:#aaa8a8;font-size:14px;}
+.search-box .search-input:-moz-placeholder {color:#aaa8a8;font-size:14px;}
+.search-box .search-input::-moz-placeholder {color:#aaa8a8;font-size:14px;}
+.search-box .search-input:-ms-input-placeholder {color:#aaa8a8;font-size:14px;}
+.settings-btn{ padding:0 10px; margin:20px 0; }
+.settings-btn .btn{
+    width:100%;
+    height:44px;
+    line-height:44px;
+    background-color: #dd2727;
+    font-size:16px;
+    text-align: center;
+    color: #fff;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px; }
+/*-------------footer-----------*/
+.footer {
+	position:fixed;
+	bottom:0;
+	left:0;
+	width:100%;
+	height:53px;
+	background:#f8f8f8;
+	z-index:9999;
+	border-top:1px solid #d0cfd0;
+}
+.footer ul li {
+	height:53px;
+	-webkit-box-flex: 1;
+	-moz-box-flex: 1;
+	-ms-box-flex: 1;
+	box-flex: 1;
+}
+.footer ul li a {
+	width:100%;
+	height:100%;
+	padding:6px 0;
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	display:block;
+	font-size:10px;
+	color:#706e6e;
+}
+.footer ul li a span {
+	font-size:10px;
+	color:#706e6e;
+}
+.footer ul li a .footer-icon {
+	display:block;
+	width:25px;
+	height:25px;
+	margin:0 auto;
+	background-position:center center;
+	background-repeat:no-repeat;
+	background-size:25px 25px;
+}
+.footer ul li a .footer-index {
+	background-image:url(../images/sy.png);
+}
+.footer ul li a .footer-classification{
+	background-image:url(../images/classification.png);
+}
+.footer ul li a .footer-cash-back{
+	background-image:url(../images/cash-back.png);
+}
+.footer ul li a .footer-cart{
+	background-image:url(../images/cart.png);
+}
+.footer ul li a .footer-my{
+	background-image:url(../images/my.png);
+}
+.footer ul li a.on span {
+	color:#dd2727;
+}
+.footer ul li a.on .footer-index {
+	background-image:url(../images/sy-on.png);
+}
+.footer ul li a.on .footer-classification{
+	background-image:url(../images/classification-on.png);
+}
+.footer ul li a.on .footer-cash-back{
+	background-image:url(../images/cash-back-on.png);
+}
+.footer ul li a.on .footer-cart{
+	background-image:url(../images/cart-on.png);
+}
+.footer ul li a.on .footer-my{
+	background-image:url(../images/my-on.png);
+}
+.mui-bar-tab~.mui-content {
+padding-bottom:53px
+}
+.mui-content {
+	background-color:#f4f4f4;
+}
+.mui-bar-nav{ -webkit-box-shadow: 0 0 0 #fff; box-shadow: 0 0 0 #fff;}
+/*点击背景效果*/
+.highlight:active{
+	background:transparent;
+	background-color:rgba(238, 238, 238, 0.3);
+ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#eeeeee, endColorstr=#eeeeee);
+}
+/*列表右箭头*/
+.right-arrow:after {
+	width:8px;
+	height:14px;
+	content:"";
+	position:absolute;
+	top: 50%;
+	right:20px;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	background-image:url(../images/right-arrow.png);
+	background-position:right center;
+	background-repeat:no-repeat;
+	background-size:8px 14px;
+}
